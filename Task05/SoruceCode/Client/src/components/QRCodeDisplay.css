@@ -1,0 +1,153 @@
+.qr-display {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.qr-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.qr-header h3 {
+  margin: 0;
+  color: #1a1a2e;
+  font-size: 1.3rem;
+}
+
+.qr-icon {
+  font-size: 1.5rem;
+  color: #6c63ff;
+}
+
+.qr-code-container {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.qr-code-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.qr-code-text .code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6c63ff;
+  letter-spacing: 2px;
+}
+
+.copy-btn {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #5a52d5;
+  transform: scale(1.05);
+}
+
+.qr-hint {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* My Socials Section */
+.my-socials-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.my-socials-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.my-socials-header h4 {
+  margin: 0;
+  color: #1a1a2e;
+  font-size: 1.1rem;
+}
+
+.edit-socials-btn {
+  background: transparent;
+  border: none;
+  color: #6c63ff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.edit-socials-btn:hover {
+  background: rgba(108, 99, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.my-socials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.my-social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.my-social-item .social-icon {
+  font-size: 1.2rem;
+}
+
+.my-social-item .social-icon.instagram {
+  color: #E4405F;
+}
+
+.my-social-item .social-icon.snapchat {
+  color: #FFFC00;
+  -webkit-text-stroke: 1px #333;
+}
+
+.my-social-item .social-icon.phone {
+  color: #25D366;
+}
+
+.my-social-item span {
+  color: #333;
+  font-weight: 500;
+}
+
+.no-socials {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
