@@ -2,8 +2,6 @@ import { Request, Response } from 'express';
 import axios from 'axios';
 import SearchHistory from '../models/SearchHistory';
 
-const weatherApiKey = process.env.WEATHER_API_KEY;
-
 // helper to determine quality label from index
 function getQualityLabel(index: number): string {
   const labels: Record<number, string> = {
@@ -18,6 +16,7 @@ function getQualityLabel(index: number): string {
 
 // get coordinates from city name
 async function fetchCityCoordinates(cityName: string) {
+  const weatherApiKey = process.env.WEATHER_API_KEY;
   const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)}&limit=1&appid=${weatherApiKey}`;
   
   const response = await axios.get(geoUrl);
@@ -36,6 +35,7 @@ async function fetchCityCoordinates(cityName: string) {
 
 // fetch pollution data from coordinates
 async function fetchPollutionData(lat: number, lon: number) {
+  const weatherApiKey = process.env.WEATHER_API_KEY;
   const pollutionUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${weatherApiKey}`;
   
   const response = await axios.get(pollutionUrl);
@@ -122,6 +122,7 @@ export const checkPollution = async (req: Request, res: Response): Promise<void>
 
   } catch (error: any) {
     console.log('Error checking pollution:', error.message);
+    console.log('Full error details:', error.response?.data || error);
     
     // check if it's an API key issue
     if (error.response && error.response.status === 401) {
