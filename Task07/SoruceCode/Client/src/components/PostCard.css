@@ -1,0 +1,248 @@
+.post-card {
+  background: linear-gradient(145deg, rgba(26, 26, 46, 0.9) 0%, rgba(20, 20, 40, 0.95) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 217, 255, 0.15);
+  border-color: rgba(0, 217, 255, 0.4);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #8b5cf6 0%, #00d9ff 100%);
+  padding: 2px;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.author-avatar svg {
+  width: 100%;
+  height: 100%;
+  color: rgba(139, 92, 246, 0.5);
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #e8e8f0;
+  transition: color 0.3s ease;
+}
+
+.post-author:hover .author-name {
+  color: #00d9ff;
+}
+
+.post-time {
+  font-size: 0.85rem;
+  color: #a0a0b0;
+}
+
+.delete-btn {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: #a0a0b0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 0, 110, 0.15);
+  color: #ff006e;
+}
+
+.post-content {
+  padding: 0 1.2rem 1.2rem;
+}
+
+.post-content p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+  color: #d0d0e0;
+  white-space: pre-wrap;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.post-stats {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  color: #a0a0b0;
+}
+
+.post-actions {
+  display: flex;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  margin-top: 0.5rem;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.9rem;
+  background: transparent;
+  border: none;
+  color: #a0a0b0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.action-btn.reacted {
+  color: var(--reaction-color, #ff006e);
+}
+
+.action-btn.reacted svg {
+  animation: likeAnim 0.3s ease;
+}
+
+@keyframes likeAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Reaction Picker Styles */
+.reaction-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.reaction-picker {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  padding: 8px 12px;
+  background: linear-gradient(145deg, rgba(26, 26, 46, 0.98) 0%, rgba(20, 20, 40, 0.99) 100%);
+  border-radius: 30px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.2s ease;
+  z-index: 100;
+}
+
+/* Bridge element to prevent gap issue */
+.reaction-picker::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.reaction-option {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: var(--reaction-color);
+  transition: all 0.2s ease;
+}
+
+.reaction-option:hover {
+  transform: scale(1.35) translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.reaction-option.active {
+  background: rgba(139, 92, 246, 0.2);
+  transform: scale(1.1);
+}
+
+/* Reaction Summary in Stats */
+.reaction-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reaction-icons-summary {
+  display: flex;
+  align-items: center;
+}
+
+.reaction-icons-summary svg {
+  font-size: 0.9rem;
+  margin-right: -4px;
+  padding: 3px;
+  background: rgba(26, 26, 46, 0.9);
+  border-radius: 50%;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.reaction-icons-summary svg:last-child {
+  margin-right: 4px;
+}

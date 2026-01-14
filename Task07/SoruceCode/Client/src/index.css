@@ -2,6 +2,17 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --primary: #00d9ff;
+  --secondary: #ff006e;
+  --accent: #8b5cf6;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --dark-bg: rgba(15, 15, 26, 0.95);
+  --card-bg: rgba(26, 26, 46, 0.8);
+  --card-border: rgba(139, 92, 246, 0.3);
+  --text-primary: #e8e8f0;
+  --text-secondary: #a0a0b0;
 }
 
 * {
@@ -12,15 +23,11 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
 }
