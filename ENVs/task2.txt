@@ -1,0 +1,8 @@
+CLIENT 
+VITE_API_URL=http://localhost:5000/api
+
+
+SERVER
+PORT=5000
+PRICES_API_KEY=pricesapi_dRnRbNXDkpe0ggDbEk04qd7u6cnlEUcD
+PRICES_API_URL=https://api.pricely.com/v1
