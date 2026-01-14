@@ -1,19 +1,24 @@
 {
-  "name": "task09-server",
+  "name": "campus-hub-server",
   "version": "1.0.0",
-  "description": "Task09 Server - Node.js Express MVC Architecture",
+  "description": "Campus Hub - Resource Management Backend",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["campus", "resource", "booking", "management"],
+  "author": "Campus Hub Team",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "nodemailer": "^6.9.7",
+    "express-validator": "^7.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
