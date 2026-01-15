@@ -1,0 +1,143 @@
+/* Charts Component Styles */
+
+.chart {
+  width: 100%;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.chart svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Line Chart Styles */
+.line-chart .grid-line {
+  stroke: #ecf0f1;
+  stroke-width: 1;
+}
+
+.line-chart .axis {
+  stroke: #95a5a6;
+  stroke-width: 2;
+}
+
+.line-chart .axis-label {
+  fill: #7f8c8d;
+  font-size: 12px;
+}
+
+.line-chart .data-line {
+  stroke: #667eea;
+  stroke-width: 3;
+  fill: none;
+}
+
+.line-chart .data-point {
+  fill: #667eea;
+  stroke: white;
+  stroke-width: 2;
+  transition: all 0.2s;
+}
+
+.line-chart .data-point:hover {
+  r: 6;
+  fill: #764ba2;
+}
+
+/* Bar Chart Styles */
+.bar-chart .axis {
+  stroke: #95a5a6;
+  stroke-width: 2;
+}
+
+.bar-chart .axis-label {
+  fill: #7f8c8d;
+  font-size: 11px;
+}
+
+.bar-chart .bar {
+  fill: #667eea;
+  transition: all 0.2s;
+}
+
+.bar-chart .bar:hover {
+  fill: #764ba2;
+}
+
+.bar-chart .bar-label {
+  fill: #2c3e50;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Pie Chart Styles */
+.pie-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pie-chart svg path {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.pie-chart svg path:hover {
+  opacity: 0.8;
+  filter: brightness(1.1);
+}
+
+.pie-label {
+  fill: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.pie-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.legend-label {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart svg {
+    min-width: 100%;
+  }
+
+  .line-chart .axis-label,
+  .bar-chart .axis-label {
+    font-size: 10px;
+  }
+
+  .pie-legend {
+    grid-template-columns: 1fr;
+  }
+}

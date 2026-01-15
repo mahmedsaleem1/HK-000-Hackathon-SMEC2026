@@ -1,0 +1,370 @@
+/* Settings Component Styles */
+
+.settings {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: 2rem;
+}
+
+.settings-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.settings-header p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.error-message {
+  padding: 1rem 1.5rem;
+  background: #fadbd8;
+  color: #e74c3c;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #e74c3c;
+}
+
+.success-message {
+  padding: 1rem 1.5rem;
+  background: #d5f4e6;
+  color: #27ae60;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #27ae60;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Settings Section */
+.settings-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+  font-weight: 600;
+  font-size: 1rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-left: 4.5rem !important;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  text-indent: 0;
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.help-text {
+  margin-top: 0.5rem;
+  color: #95a5a6;
+  font-size: 0.85rem;
+}
+
+/* Category Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-budget {
+  margin-bottom: 0;
+}
+
+/* Budget Summary */
+.budget-summary {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.summary-row.negative {
+  color: #ffd7d7;
+}
+
+.summary-row.positive {
+  color: #d4f4dd;
+}
+
+.summary-row .label {
+  opacity: 0.95;
+}
+
+.summary-row .amount {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Threshold Info */
+.threshold-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.info-card h4 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.threshold-value {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.threshold-value span {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.threshold-value .example {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.threshold-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.threshold-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.threshold-item span:first-child {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.threshold-item .example {
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+/* Settings Actions */
+.settings-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #ecf0f1;
+  color: #2c3e50;
+  border: 2px solid #bdc3c7;
+}
+
+.btn-secondary:not(:disabled):hover {
+  background: #bdc3c7;
+}
+
+/* Tips Section */
+.tips-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.tips-section h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tip h4 {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.tip p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Loading State */
+.settings.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings {
+    padding: 1rem;
+  }
+
+  .settings-section {
+    padding: 1.5rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .threshold-info {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    min-width: 100%;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}

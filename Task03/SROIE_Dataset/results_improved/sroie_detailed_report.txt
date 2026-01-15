@@ -1,0 +1,26 @@
+============================================================
+SROIE DATASET OCR TESTING REPORT (IMPROVED)
+============================================================
+
+Generated: 2026-01-14 19:12:27
+Dataset: SROIE (Scanned Receipts OCR and Information Extraction)
+Improvements: Image preprocessing, multiple OCR passes, better parsing
+
+SUMMARY
+------------------------------------------------------------
+Total Images Processed: 20
+Successful Extractions: 11
+Success Rate: 55.0%
+
+FIELD-LEVEL ACCURACY
+------------------------------------------------------------
+Vendor Name Accuracy: 30.0%
+Total Amount Accuracy: 10.0%
+Date Accuracy: 45.0%
+
+PERFORMANCE METRICS
+------------------------------------------------------------
+Total Processing Time: 65.58s
+Average Time per Image: 3.28s
+
+============================================================

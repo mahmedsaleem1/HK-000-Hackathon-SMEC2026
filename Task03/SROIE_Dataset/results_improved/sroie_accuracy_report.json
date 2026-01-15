@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "total_images_processed": 20,
+    "successful_extractions": 11,
+    "success_rate": 55.0
+  },
+  "field_accuracy": {
+    "vendor_accuracy": 30.0,
+    "amount_accuracy": 10.0,
+    "date_accuracy": 45.0
+  },
+  "performance": {
+    "total_processing_time": 65.58,
+    "average_time_per_image": 3.28
+  },
+  "timestamp": "2026-01-14T19:12:27.838216"
+}

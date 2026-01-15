@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "total_images": 100,
+    "processed_successfully": 100,
+    "success_rate": 100.0
+  },
+  "exact_match_accuracy": {
+    "date": 42.0,
+    "amount": 25.0,
+    "vendor": 30.0
+  },
+  "fuzzy_match_accuracy": {
+    "date": 42.0,
+    "amount": 25.0,
+    "vendor": 57.0
+  },
+  "extraction_rate": {
+    "date": 51.0,
+    "amount": 82.0,
+    "vendor": 100.0
+  },
+  "error_analysis": {
+    "date": {
+      "not_extracted": 49,
+      "format_mismatch": 2,
+      "partial_match": 2,
+      "wrong_value": 5
+    },
+    "amount": {
+      "not_extracted": 18,
+      "partial_match": 26,
+      "wrong_value": 30,
+      "format_mismatch": 1
+    },
+    "vendor": {
+      "wrong_value": 21,
+      "wrong_field": 14,
+      "partial_match": 8
+    }
+  },
+  "processor_type": "improved",
+  "timestamp": "2026-01-15T04:26:14.834501"
+}
